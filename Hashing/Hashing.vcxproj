@@ -116,7 +116,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="tHashmap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hash.h" />

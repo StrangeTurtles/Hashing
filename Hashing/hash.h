@@ -31,9 +31,9 @@ size_t hash<char*>(char * const & val)
 {
 	int count = 0;
 	int hash = 0;
-	while (val[count] != '/0')
+	while (val[count] != '\0')
 	{
-		(int)val[count];
+		hash += (int)val[count];
 		count++;
 	}
 	return hash * 2654435761 % std::numeric_limits<size_t>::max();
@@ -43,12 +43,10 @@ size_t hash<char*>(char * const & val)
 template<>
 size_t hash<std::string>(const std::string& val)
 {
-	int count = 0;
 	int hash = 0;
-	while (val[count] != '/0')
+	for (int i = 0; i < val.length(); i++)
 	{
-		(int)val[count];
-		count++;
+		hash += (int)val[i];
 	}
 	return hash * 2654435761 % std::numeric_limits<size_t>::max();
 }
